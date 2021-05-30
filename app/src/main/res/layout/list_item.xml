@@ -1,21 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="@dimen/list_item_height"
+    android:background="@color/tan_background">
 
-    <TextView
-        android:id="@+id/miwok_text_view"
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/backgroundColor"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="lutti" />
+        android:layout_height="@dimen/list_item_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/image"
+        android:orientation="vertical"
+        android:paddingStart="16dp">
 
-    <TextView
-        android:id="@+id/default_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="one" />
+        <TextView
+            android:id="@+id/miwok_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="lutti" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/default_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:text="one" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_play_arrow" />
+
+<!--    For making the the list clickable another method rather than drawSelectorOnTop attribute-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="?android:attr/selectableItemBackground"/>-->
+
+</RelativeLayout>
