@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
-public class ColorsFragment extends Fragment {
+public class    ColorsFragment extends Fragment {
 
     private MediaPlayer mediaPlayer;
     private AudioManager audioManager;
