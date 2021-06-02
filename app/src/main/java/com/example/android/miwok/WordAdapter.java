@@ -24,7 +24,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Check if the existing view is being reused, otherwise inflate(fill) the view
+        // Check if the existing view is beinKg reused, otherwise inflate(fill) the view
         View listItemView = convertView;
         if(listItemView == null)
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
